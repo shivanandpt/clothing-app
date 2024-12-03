@@ -18,13 +18,10 @@ const ProductList: React.FC<ProductListProps> = ({
         dispatch(sortProducts(sortOrder));
     }, [sortOrder]);
 
-    useEffect(() => {
-        dispatch(sortProducts(sortOrder));
-    }, [])
-
     const handleSort = (e: any) => {
         setSortOrder(e.target.value);
     }
+    console.log(products)
     return (
         <>
             <div className="sort-dropdown">
@@ -37,7 +34,7 @@ const ProductList: React.FC<ProductListProps> = ({
             </div>
             <div>
                 <div className="product-grid">
-                    {products.map((product) => (
+                    {products && products.map((product) => (
                         <ProductCard key={product.id}  {...product} ></ProductCard>
                     ))}
                 </div>
