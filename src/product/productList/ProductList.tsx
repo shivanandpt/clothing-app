@@ -13,10 +13,20 @@ const ProductList: React.FC<ProductListProps> = ({
     const products = useSelector((state) => state.products.products);
     const dispatch = useDispatch();
     const [sortOrder, setSortOrder] = useState('low-to-high');
+    /* 
+        Add this so that only sorted values shows up, if not added 1st unsorted array will showup and next useEffect will run
+        rerender the sorted array, we will see unsorted array for fraction on screen 
+     */
+    const [productsInitialized, setProductsInitialized] = useState(false);
 
     useEffect(() => {
         dispatch(sortProducts(sortOrder));
     }, [sortOrder]);
+
+    useEffect(() => {
+        dispatch(sortProducts(sortOrder));
+        setProductsInitialized(true);
+    }, []);
 
     const handleSort = (e: any) => {
         setSortOrder(e.target.value);
@@ -34,7 +44,7 @@ const ProductList: React.FC<ProductListProps> = ({
             </div>
             <div>
                 <div className="product-grid">
-                    {products && products.map((product) => (
+                    {productsInitialized && products.map((product) => (
                         <ProductCard key={product.id}  {...product} ></ProductCard>
                     ))}
                 </div>

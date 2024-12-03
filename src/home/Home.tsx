@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <div className="home">
-            <Navbar></Navbar>
+            
             <ProductList products={products}></ProductList>
             {/* <ProductDetail></ProductDetail> */}
             {/*  <Panel images={showcaseImages}>

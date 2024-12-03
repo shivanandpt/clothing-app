@@ -9,6 +9,7 @@ export interface ProductDetailsProps {
     material?: string,
     color?: string,
     tags?: string[];
+    selected: boolean;
     addToCart?: (id: number) => void
 }
 
@@ -28,6 +29,7 @@ export const products: ProductDetailsProps[] = [
         material: "61% cotton, 34% polyester, 5% elastane",
         color: "Black",
         tags: ["Skirt", "Summer", "Casual"],
+        selected: false,
     },
     {
         id: 2,
@@ -40,6 +42,7 @@ export const products: ProductDetailsProps[] = [
         material: "100% Cotton",
         color: "White",
         tags: ["Shirt", "Formal", "Spring"],
+        selected: false,
     },
     {
         id: 3,
@@ -52,6 +55,7 @@ export const products: ProductDetailsProps[] = [
         material: "Denim",
         color: "Blue",
         tags: ["Jacket", "Denim", "Winter"],
+        selected: false,
     },
     {
         id: 4,
@@ -64,6 +68,7 @@ export const products: ProductDetailsProps[] = [
         material: "100% Cotton",
         color: "Red",
         tags: ["T-Shirt", "Casual", "Graphic"],
+        selected: false,
     },
     {
         id: 5,
@@ -76,6 +81,7 @@ export const products: ProductDetailsProps[] = [
         material: "Mesh, Rubber",
         color: "Gray",
         tags: ["Sneakers", "Sports", "Comfort"],
+        selected: false,
     },
     {
         id: 6,
@@ -88,6 +94,7 @@ export const products: ProductDetailsProps[] = [
         material: "Polyester, Lace",
         color: "Navy Blue",
         tags: ["Dress", "Evening", "Elegant"],
+        selected: false,
     },
     {
         id: 7,
@@ -100,6 +107,7 @@ export const products: ProductDetailsProps[] = [
         material: "Cotton Blend",
         color: "Black",
         tags: ["Joggers", "Casual", "Comfort"],
+        selected: false,
     },
     {
         id: 8,
@@ -112,6 +120,7 @@ export const products: ProductDetailsProps[] = [
         material: "Genuine Leather",
         color: "Brown",
         tags: ["Handbag", "Leather", "Accessories"],
+        selected: false,
     },
     {
         id: 9,
@@ -124,6 +133,7 @@ export const products: ProductDetailsProps[] = [
         material: "Cotton",
         color: "Navy & White",
         tags: ["Polo Shirt", "Casual", "Smart"],
+        selected: false,
     },
     {
         id: 10,
@@ -136,6 +146,7 @@ export const products: ProductDetailsProps[] = [
         material: "100% Wool",
         color: "Gray",
         tags: ["Scarf", "Winter", "Cozy"],
+        selected: false,
     },
 ];
 

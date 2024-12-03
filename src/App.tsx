@@ -9,7 +9,8 @@ import AboutPage from './about/AboutPage.tsx';
 import NewArrival from './newArrival/NewArrival.tsx';
 import { Provider } from 'react-redux';
 import store from './store/store.ts';
-
+import ProductDetail from './product/productDetails/ProductDetail.tsx';
+import Navbar from './home/navbar/Navbar.tsx';
 function App() {
 
   return (
@@ -17,13 +18,14 @@ function App() {
       <Provider store={store}>
         <ThemeProvider>
           <Router>
+            <Navbar></Navbar>
             <Routes>
               <Route path='/' element={<Home></Home>}></Route>
               <Route path='contact' element={<Contact></Contact>}> </Route>
               <Route path='about' element={<AboutPage></AboutPage>}></Route>
               <Route path='newArrival' element={<NewArrival></NewArrival>}></Route>
               <Route path='products' element={<Home></Home>}></Route>
-              {/* <Route path='products/:id' element={<ProductDetail></ProductDetail>}></Route> */}
+              <Route path='products/:id' element={<ProductDetail></ProductDetail>}></Route>
             </Routes>
           </Router>
         </ThemeProvider>
