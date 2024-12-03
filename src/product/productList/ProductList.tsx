@@ -2,15 +2,13 @@ import "./ProductList.css";
 import { ProductListProps } from "../Product"
 import ProductCard from "../productCard/ProductCard";
 import { useEffect, useState } from "react";
-import ProductDetail from "../productDetails/ProductDetail";
 import { useDispatch, useSelector } from "react-redux";
 import { sortProducts, filterProduct } from "../../store/productSlice/productSlice";
 
 const ProductList: React.FC<ProductListProps> = ({
 
 }) => {
-
-    const products = useSelector((state) => state.products.products);
+    const products = useSelector((state: any) => state.products.products);
     const dispatch = useDispatch();
     const [sortOrder, setSortOrder] = useState('low-to-high');
     /* 
@@ -31,7 +29,6 @@ const ProductList: React.FC<ProductListProps> = ({
     const handleSort = (e: any) => {
         setSortOrder(e.target.value);
     }
-    console.log(products)
     return (
         <>
             <div className="sort-dropdown">
@@ -44,7 +41,7 @@ const ProductList: React.FC<ProductListProps> = ({
             </div>
             <div>
                 <div className="product-grid">
-                    {productsInitialized && products.map((product) => (
+                    {productsInitialized && products.map((product: any) => (
                         <ProductCard key={product.id}  {...product} ></ProductCard>
                     ))}
                 </div>

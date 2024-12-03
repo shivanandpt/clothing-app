@@ -6,10 +6,9 @@ import { useParams } from "react-router-dom";
 
 const ProductDetail: React.FC<ProductDetailsProps> = ({
 }) => {
-    const products = useSelector((state) => state.products.products);
+    const products = useSelector((state:any) => state.products.products);
     const { id } = useParams();
-    const product = products.find((product) => product.id == id);
-    console.log('product', product)
+    const product = products.find((product:any) => product.id == id);
     const {
         name,
         image,

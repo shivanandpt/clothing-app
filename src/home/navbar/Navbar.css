@@ -163,25 +163,31 @@ input:checked + .slider:before {
 }
 
 body.light-theme {
-    --navbar-bg: #007bff;
-    --navbar-text: white;
-    --slider-bg: #ccc;
-    --slider-handle: white;
-    background-color: #f8f9fa;
-    color: #212529;
-    transition: background-color 0.3s, color 0.3s;
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --secondary-bg-color: #ffffff;
+    --border-color: #ddd;
+    --button-bg-color: #007bff;
+    --button-text-color: #ffffff;
+    --button-hover-bg-color: #0056b3;
+    --input-bg-color: #ffffff;
+    --input-text-color: #212529;
 }
+
 
 /* Dark Theme */
 body.dark-theme {
-    --navbar-bg: #212529;
-    --navbar-text: #f8f9fa;
-    --slider-bg: #444;
-    --slider-handle: #f8f9fa;
-    background-color: #121212;
-    color: #f8f9fa; /* Default text color */
-    transition: background-color 0.3s, color 0.3s;
+    --bg-color: #121212;
+    --text-color: #f8f9fa;
+    --secondary-bg-color: #212121;
+    --border-color: #555;
+    --button-bg-color: #444;
+    --button-text-color: #f8f9fa;
+    --button-hover-bg-color: #555;
+    --input-bg-color: #333333;
+    --input-text-color: #f8f9fa;
 }
+
 
 body.dark-theme .product-title {
     color: #ffffff; /* Explicitly set a brighter color for visibility */

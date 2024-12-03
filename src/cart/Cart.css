@@ -1,0 +1,158 @@
+/* Cart Container */
+.cart-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color); /* Dynamic background color */
+    color: var(--text-color); /* Dynamic text color */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Items Section */
+.cart-items {
+    flex: 2;
+    background: var(--secondary-bg-color); /* Theme background color */
+    color: var(--text-color); /* Dynamic text color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items h2 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.cart-items table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-items table th,
+.cart-items table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color); /* Theme border color */
+    color: var(--text-color);
+}
+
+.product-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--bg-color); /* Placeholder image background */
+}
+
+/* Payment Info Section */
+.payment-info {
+    flex: 1;
+    background: var(--secondary-bg-color); /* Theme background */
+    color: var(--text-color); /* Dynamic text color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-info h2 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Form Inputs */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-bg-color); /* Theme-based input background */
+    color: var(--input-text-color); /* Theme-based input text */
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box; /* Ensure no overflow */
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--button-bg-color); /* Focused border color */
+    box-shadow: 0 0 5px var(--button-bg-color); /* Subtle highlight */
+}
+
+/* Inline Form Inputs (Expiration Date & CVV) */
+.form-group.inline {
+    display: flex;
+    gap: 10px;
+}
+
+.form-group.inline div {
+    flex: 1;
+}
+
+/* Order Summary */
+.order-summary {
+    margin-top: 20px;
+}
+
+.order-summary div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.order-summary .total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+/* Checkout Button */
+.checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.checkout-btn:hover {
+    background: var(--button-hover-bg-color);
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .cart-container {
+        flex-direction: column;
+    }
+
+    .cart-items {
+        order: 1;
+    }
+
+    .payment-info {
+        order: 2;
+        margin-top: 20px;
+    }
+}
