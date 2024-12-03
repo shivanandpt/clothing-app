@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import './Cart.css'
-import { removeFromCart } from "../store/cartSlice/cartItemSlice";
+import { removeFromCart, increaseQuantity, decreaseQuantity} from "../store/cartSlice/cartItemSlice";
 
 const Cart = () => {
     const cartItems = useSelector((state) => state.cartItems.cartItems);
@@ -10,6 +10,12 @@ const Cart = () => {
     const total = subtotal + shipping;
     const handleDelete = (id) => {
         dispatch(removeFromCart(id));
+    };
+    const addQuantity = (id) => {
+        dispatch(increaseQuantity(id));
+    }
+    const removeQuantity = (id) => {
+        dispatch(decreaseQuantity(id));
     }
     return (
         <div className="cart-container">
@@ -36,9 +42,9 @@ const Cart = () => {
                                 <td>{item.size}</td>
                                 <td>
                                     <div className="quantity-controls">
-                                        <button>-</button>
+                                        <button onClick={() => removeQuantity(item.id)}>-</button>
                                         <span>{item.quantity}</span>
-                                        <button>+</button>
+                                        <button onClick={() => addQuantity(item.id)}>+</button>
                                     </div>
                                 </td>
                                 <td>${(item.price * item.quantity).toFixed(2)}</td>
