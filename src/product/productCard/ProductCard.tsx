@@ -7,11 +7,10 @@ const ProductCard: React.FC<ProductDetailsProps> = ({
     image,
     description,
     price,
-    handleClick
 }) => {
 
     return (
-        <div className="product-card" onClick={(e) => handleClick(e, id)}>
+        <div className="product-card" >
             <img src={image} alt="Man Hoodie" />
             <h3 className="product-title">{name}</h3>
             <p>{description}</p>

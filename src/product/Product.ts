@@ -10,7 +10,6 @@ export interface ProductDetailsProps {
     color?: string,
     tags?: string[];
     addToCart?: (id: number) => void
-    handleClick?: (e: any, id: number) => void
 }
 
 export interface ProductListProps {
