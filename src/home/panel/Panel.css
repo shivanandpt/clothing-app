@@ -1,0 +1,30 @@
+.panel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.panel-slider {
+    display: flex;
+    animation: slide-right-left 10s linear infinite;
+}
+
+.panel-item {
+    min-width: 100%;
+}
+
+.panel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+@keyframes slide-right-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

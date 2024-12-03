@@ -1,0 +1,19 @@
+.home {
+    font-family: Arial, sans-serif;
+    color: var(--text-primary);
+    background-color: var(--background-primary);
+    padding: 20px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.product-cards {
+    margin-top: 30px;
+}
+
+.card-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+

@@ -1,0 +1,54 @@
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
+    gap: 20px; /* Spacing between cards */
+    padding: 20px;
+}
+/* Sort Dropdown */
+.sort-dropdown {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align the dropdown to the right */
+    gap: 10px;
+}
+
+.sort-dropdown label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.sort-dropdown select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.sort-dropdown select:focus {
+    border-color: #007bff;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 1 column for small/mobile screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 column for small/mobile screens */
+    }
+}

@@ -1,0 +1,307 @@
+/* Product Detail Page */
+.product-detail-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background: #ffffff; /* Default light background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme changes */
+}
+
+body.dark-theme .product-detail-page {
+    background: #212121; /* Darker background for dark mode */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Product Image */
+.product-image {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Product Info */
+.product-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #000; /* Default light mode text color */
+}
+
+body.dark-theme .product-info {
+    color: #f8f9fa; /* Light text for readability in dark mode */
+}
+
+/* Product Title */
+.product-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional shadow for better contrast */
+}
+
+body.dark-theme .product-title {
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.1); /* Adjust shadow for dark mode */
+}
+
+/* Collection */
+.product-collection {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #555; /* Default light mode color */
+}
+
+body.dark-theme .product-collection {
+    color: #b3b3b3; /* Softer color for dark mode */
+}
+
+/* Ratings and Reviews */
+.ratings {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.stars {
+    font-size: 1rem;
+    color: #f5c518; /* Star color remains the same in both themes */
+}
+
+.reviews-link {
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+body.dark-theme .reviews-link {
+    color: #66b2ff; /* Softer blue for dark mode */
+}
+
+.reviews-link:hover {
+    text-decoration: underline;
+}
+
+/* Price */
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222; /* Default light mode text color */
+}
+
+body.dark-theme .price {
+    color: #f8f9fa; /* Bright text for readability in dark mode */
+}
+
+/* Description */
+.description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555; /* Default light mode color */
+}
+
+body.dark-theme .description {
+    color: #e0e0e0; /* Lighter text for dark mode */
+}
+
+/* Options Section */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Labels */
+.label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Color Options */
+.color-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.colors {
+    display: flex;
+    gap: 10px;
+}
+
+.color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent; /* Default border */
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+/* Specific Colors */
+.color.red {
+    background-color: red;
+}
+
+.color.green {
+    background-color: green;
+}
+
+.color.blue {
+    background-color: blue;
+}
+
+/* Hover Effect */
+.color:hover {
+    border-color: #007bff; /* Blue border on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Dark Theme Colors */
+body.dark-theme .color:hover {
+    border-color: #f8f9fa; /* White border on hover for dark mode */
+}
+
+
+/* Size Options */
+.size-options {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #333; /* Default text color for light mode */
+}
+
+body.dark-theme .size-options {
+    color: #e0e0e0; /* Light text color for dark mode */
+}
+
+.sizes {
+    display: flex;
+    gap: 10px;
+}
+
+/* Default Size Button */
+.size {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white; /* Default background */
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    color: #333; /* Default text color for light mode */
+}
+
+/* Active/Selected Size */
+.size.active {
+    background: #007bff; /* Blue background for selected size */
+    color: white; /* White text for better contrast */
+    border-color: #007bff;
+}
+
+/* Hover Effect */
+.size:hover {
+    background: #0056b3; /* Darker blue on hover */
+    color: white;
+    border-color: #0056b3;
+}
+
+/* Dark Theme Size Options */
+body.dark-theme .size {
+    background: #333; /* Dark background for size buttons */
+    color: #f8f9fa; /* Light text for dark mode */
+    border-color: #555; /* Subtle border in dark mode */
+}
+
+body.dark-theme .size.active {
+    background: #007bff; /* Blue background for selected size in dark mode */
+    color: white;
+    border-color: #007bff;
+}
+
+body.dark-theme .size:hover {
+    background: #0056b3; /* Hover effect for dark mode */
+    color: white;
+    border-color: #0056b3;
+}
+/* Quantity Selector */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333; /* Default light mode text color */
+}
+
+body.dark-theme .quantity-selector {
+    color: #e0e0e0; /* Light text for dark mode */
+}
+
+.quantity-selector input {
+    width: 50px;
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff; /* Default light background */
+    color: #333; /* Default light text */
+}
+
+body.dark-theme .quantity-selector input {
+    background: #333; /* Dark background for input in dark mode */
+    color: #f8f9fa; /* Light text for readability */
+    border-color: #555; /* Subtle border in dark mode */
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+body.dark-theme .add-to-cart {
+    background-color: #444; /* Darker background for dark mode */
+    color: #f8f9fa; /* Light text for readability */
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+body.dark-theme .add-to-cart:hover {
+    background-color: #555; /* Slightly lighter hover effect in dark mode */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .product-detail-page {
+        flex-direction: column;
+    }
+
+    .product-image {
+        max-width: 100%;
+    }
+}

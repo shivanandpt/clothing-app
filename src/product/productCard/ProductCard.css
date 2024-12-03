@@ -1,0 +1,137 @@
+/* Default Light Theme Card Style */
+.product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #333; /* Default text color */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333; /* Ensure header text is visible in light mode */
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #666; /* Description color for light mode */
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.size-options {
+    font-size: 0.9rem;
+    color: #333; /* Size options color for light mode */
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333; /* Price text color for light mode */
+    margin-bottom: 20px;
+}
+
+/* Button */
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Dark Theme Card Style */
+body.dark-theme .product-card {
+    background: #212121; /* Darker background for dark mode */
+    color: #f8f9fa; /* Lighter text for readability */
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1); /* Subtle shadow in dark mode */
+}
+
+body.dark-theme .product-card h3 {
+    color: #f8f9fa; /* Title text color for dark mode */
+}
+
+body.dark-theme .product-card p {
+    color: #e0e0e0; /* Description text color for dark mode */
+}
+
+body.dark-theme .size-options {
+    color: #e0e0e0; /* Size options text color for dark mode */
+}
+
+body.dark-theme .price {
+    color: #f8f9fa; /* Price text color for dark mode */
+}
+
+body.dark-theme .add-to-cart {
+    background-color: #444; /* Dark button background */
+    color: #f8f9fa; /* Button text color for dark mode */
+}
+
+body.dark-theme .add-to-cart:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
+
+/* Standout Card Style */
+.product-card.standout {
+    background: #007bff;
+    color: white;
+    transform: scale(1.1);
+}
+
+.product-card.standout h3,
+.product-card.standout p,
+.product-card.standout .price,
+.product-card.standout .size-options {
+    color: white;
+}
+
+.product-card.standout .add-to-cart {
+    background-color: white;
+    color: #007bff;
+    border: none;
+}
+
+.product-card.standout .add-to-cart:hover {
+    background-color: #f0f0f0;
+}
+
+/* Hover Effects */
+.product-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: #007bff;
+    color: white;
+}
+
+.product-card:hover h3,
+.product-card:hover p,
+.product-card:hover .price,
+.product-card:hover .size-options {
+    color: white;
+}
+
+.product-card:hover .add-to-cart {
+    background-color: white;
+    color: #007bff;
+}

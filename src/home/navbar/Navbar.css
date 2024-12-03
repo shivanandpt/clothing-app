@@ -1,0 +1,188 @@
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: var(--navbar-bg, #007bff);
+    color: var(--navbar-text, white);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between; /* Space between the left, center, and right sections */
+    align-items: center;
+    width: 100%;
+}
+
+/* Navbar Logo */
+.navbar-logo {
+    flex: 0 0 auto; /* Fix the logo's position */
+    margin-left: 10px;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navbar Links */
+.navbar-links {
+    flex: 1; /* Take available space for the links */
+    display: flex;
+    justify-content: right; /* Center the links */
+    list-style: none;
+    margin-right: 20px;
+    gap: 20px;
+}
+
+.navbar-links li a {
+    color: var(--navbar-text, white);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+    color: #ffc107;
+}
+
+/* Hamburger Icon and Theme Switcher */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 0 0 auto; /* Ensure it doesn't shrink or expand */
+}
+
+.hamburger {
+    display: none; /* Hidden on large screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--navbar-text, white);
+    font-size: 1.5rem;
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--slider-bg);
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--slider-handle);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007bff; /* Accent color for checked state */
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.theme-label {
+    font-size: 0.9rem;
+    color: var(--navbar-text, white);
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on smaller screens */
+    }
+
+    .navbar-links {
+        display: none; /* Hide links by default */
+    }
+
+    .navbar-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: var(--navbar-bg, #007bff);
+        width: 200px;
+        padding: 10px 0;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .navbar-links li {
+        padding: 10px 0;
+    }
+
+    .navbar-links li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Light Theme */
+:root {
+    --slider-bg: #ccc;
+    --slider-handle: white;
+}
+
+body.light-theme {
+    --navbar-bg: #007bff;
+    --navbar-text: white;
+    --slider-bg: #ccc;
+    --slider-handle: white;
+    background-color: #f8f9fa;
+    color: #212529;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    --navbar-bg: #212529;
+    --navbar-text: #f8f9fa;
+    --slider-bg: #444;
+    --slider-handle: #f8f9fa;
+    background-color: #121212;
+    color: #f8f9fa; /* Default text color */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme .product-title {
+    color: #ffffff; /* Explicitly set a brighter color for visibility */
+}
