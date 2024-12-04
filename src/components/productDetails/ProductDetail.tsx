@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { ProductDetailsProps } from "../Product";
+import { ProductDetailsProps } from "../../pages/products/Product";
 import "./ProductDetail.css"
 import React from "react";
 import { useParams } from "react-router-dom";

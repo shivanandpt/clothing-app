@@ -1,17 +1,17 @@
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
-import Home from './home/Home'
+import Home from './components/home/Home.tsx'
 import { ThemeProvider } from './theme/Theme';
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import Contact from "./contact/Contact.tsx";
-import AboutPage from './about/AboutPage.tsx';
-import NewArrival from './newArrival/NewArrival.tsx';
+import Contact from "./pages/contact/Contact.tsx";
+import AboutPage from './pages/about/AboutPage.tsx';
+import NewArrival from './pages/newArrival/NewArrival.tsx';
 import { Provider } from 'react-redux';
-import store from './store/store.ts';
-import ProductDetail from './product/productDetails/ProductDetail.tsx';
-import Navbar from './home/navbar/Navbar.tsx';
-import Cart from './cart/Cart.tsx';
+import store from './redux/store.ts';
+import ProductDetail from './components/productDetails/ProductDetail.tsx';
+import Navbar from './components/navbar/Navbar.tsx';
+import Cart from './components/cart/Cart.tsx';
 function App() {
 
   return (

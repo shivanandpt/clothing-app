@@ -1,20 +1,20 @@
 import { useDispatch, useSelector } from "react-redux";
 import './Cart.css'
-import { removeFromCart, increaseQuantity, decreaseQuantity} from "../store/cartSlice/cartItemSlice";
+import { removeFromCart, increaseQuantity, decreaseQuantity } from "../../redux/cartSlice/cartItemSlice";
 
 const Cart = () => {
-    const cartItems = useSelector((state) => state.cartItems.cartItems);
+    const cartItems = useSelector((state: any) => state.cartItems.cartItems);
     const dispatch = useDispatch();
-    const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const subtotal = cartItems.reduce((sum: number, item: any) => sum + item.price * item.quantity, 0);
     const shipping = 10.00; // Flat rate shipping
     const total = subtotal + shipping;
-    const handleDelete = (id) => {
+    const handleDelete = (id: number) => {
         dispatch(removeFromCart(id));
     };
-    const addQuantity = (id) => {
+    const addQuantity = (id: number) => {
         dispatch(increaseQuantity(id));
     }
-    const removeQuantity = (id) => {
+    const removeQuantity = (id: number) => {
         dispatch(decreaseQuantity(id));
     }
     return (

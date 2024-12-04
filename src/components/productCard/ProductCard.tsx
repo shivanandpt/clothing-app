@@ -1,8 +1,8 @@
 import "./ProductCard.css";
-import { ProductDetailsProps } from "../Product"
+import { ProductDetailsProps } from "../../pages/products/Product"
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../../store/cartSlice/cartItemSlice";
+import { addToCart } from "../../redux/cartSlice/cartItemSlice";
 
 const ProductCard: React.FC<ProductDetailsProps> = ({
     id,
@@ -11,10 +11,10 @@ const ProductCard: React.FC<ProductDetailsProps> = ({
     description,
     price,
 }) => {
-    const products = useSelector((state) => state.products.products)
+    const products = useSelector((state: any) => state.products.products)
     const dispatch = useDispatch();
-    const handleAddToCart = (productId) => {
-        const product = products.find(p => p.id == productId);
+    const handleAddToCart = (productId: number) => {
+        const product = products.find((p: any) => p.id === productId);
         dispatch(addToCart({ ...product, quantity: 1 }));
     }
     return (

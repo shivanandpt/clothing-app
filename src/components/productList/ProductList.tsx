@@ -1,9 +1,9 @@
 import "./ProductList.css";
-import { ProductListProps } from "../Product"
+import { ProductListProps } from "../../pages/products/Product"
 import ProductCard from "../productCard/ProductCard";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { sortProducts, filterProduct } from "../../store/productSlice/productSlice";
+import { sortProducts, filterProduct } from "../../redux/productSlice/productSlice";
 
 const ProductList: React.FC<ProductListProps> = ({
 
