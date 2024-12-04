@@ -5,9 +5,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { sortProducts, filterProduct } from "../../redux/productSlice/productSlice";
 
-const ProductList: React.FC<ProductListProps> = ({
-
-}) => {
+const ProductList: React.FC = () => {
     const products = useSelector((state: any) => state.products.products);
     const dispatch = useDispatch();
     const [sortOrder, setSortOrder] = useState('low-to-high');

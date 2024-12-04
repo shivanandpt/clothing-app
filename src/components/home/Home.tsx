@@ -2,8 +2,10 @@
 import "./Home.css"
 
 import ProductList from "../productList/ProductList";
-import { products } from "../../pages/products/Product"
 import Carousel from "../carousel/Carousel";
+import Filter from '../filter/Filter'
+import filters from "../../constant/filter";
+
 const images = [
     { image: "https://placehold.co/1200x500?text=Image+1", id: 1 },
     { image: "https://placehold.co/1200x500?text=Image+2", id: 2 },
@@ -15,8 +17,19 @@ const Home = () => {
 
     return (
         <div className="home">
-            <Carousel images={images}></Carousel>
-            <ProductList products={products}></ProductList>
+            <div className="app">
+                <main className="app-main">
+                    <aside className="app-filters">
+                        <Filter filters={filters}></Filter>
+                    </aside>
+                    <section className="app-products">
+                        <Carousel images={images}></Carousel>
+                        <ProductList ></ProductList>
+                    </section>
+                </main>
+            </div>
+
+
             {/* <ProductDetail></ProductDetail> */}
             {/*  <Panel images={showcaseImages}>
             </Panel>

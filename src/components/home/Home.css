@@ -17,3 +17,34 @@
     justify-content: center;
 }
 
+
+.app-main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .app-filters {
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .app-products {
+    flex: 3;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .app-main {
+      flex-direction: column;
+    }
+  
+    .app-filters {
+      order: 2;
+    }
+  
+    .app-products {
+      order: 1;
+    }
+  }
+  
